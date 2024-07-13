@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roller</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #FFE9D0;
+        }
+        .title {
+            font-size: 36px;
+            color: #333;
+            margin-top: 20px;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .img-dice {
+            height: 300px;
+            margin-bottom: 20px;
+        }
+        .roll-btn {
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            background: #BBE9FF;
+            color: black;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 20px;
+        }
+        .roll-btn:hover {
+            background: #68cbf9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="dice (6).png" class="img-dice" id="img-dice"/>
+        <button class="roll-btn" onclick="roll()">Roll</button>
+    </div>
+    <h1 class="title">Dice Roller</h1>
+    <script>
+        function roll() {
+            const randomNumber = Math.floor(Math.random() * (7 - 1)) + 1;
+            const imgElement = document.getElementById("img-dice");
+            switch(randomNumber) {
+                case 1:
+                    imgElement.src = "1.png";
+                    break;
+                case 2:
+                    imgElement.src = "2.png";
+                    break;
+                case 3:
+                    imgElement.src = "3.png";
+                    break;
+                case 4:
+                    imgElement.src = "4.png";
+                    break;
+                case 5:
+                    imgElement.src = "5.png";
+                    break;
+                case 6:
+                    imgElement.src = "6.png";
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
